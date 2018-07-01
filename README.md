@@ -27,14 +27,14 @@
   
 <img src="./img/formul4.png" width="70%">  
   
-이후 attention 정보와 히든 벡터의 정보를 뉴럴네트워크 G함수로 넣어 v1, v2를 얻는다.  
+이후 attention 정보와 히든 벡터의 정보를 FC layer G함수로 넣어 v1, v2를 얻는다.  
 그리고 마지막으로 v1, v2를 합해 최종 컨택스트 벡터를 얻는다.  
 
   
   
 ### 2. Test result   
 #### 2.1 Variants model  
-##### Vanilla : 논문에서 가장기본적으로 기술한 내용의 모델이다. 워드 임베딩 -> 뉴럴네트워크 -> attention의 흐름이다.  
+##### Vanilla : 논문에서 기본적으로 기술한 내용의 모델이다. 워드 임베딩 -> FC layer -> attention의 흐름이다.  
 5epochs 수행후 Test accuracy는 74.6%를 기록하였다.  
 (snli_dec_vanilla_model.py, snli_dec_vanilla_trainer.py)  
 ##### Bi-RNN : 위 버전에서 조금 나은 성능향상을 위해 개인적으로 시도해보았다. 워드 임베딩 -> Bi-RNN(GRU) -> attention의 흐름이다.  
