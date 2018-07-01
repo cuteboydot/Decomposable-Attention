@@ -34,8 +34,12 @@
   
 ### 2. Test result   
 #### 2.1 Variants model  
-##### Vanilla : 논문에서 가장기본적으로 기술한 내용의 모델이다. 워드 임베딩 -> 뉴럴네트워크 -> attention의 흐름이다. (snli_dec_vanilla_model.py, snli_dec_vanilla_trainer.py)  
-##### Bi-RNN : 위 버전에서 조금 나은 성능향상을 위해 개인적으로 시도해보았다. 워드 임베딩 -> Bi-RNN(GRU) -> attention의 흐름이다. (snli_dec_rnn_model.py, snli_dec_rnn_trainer.py)  
+##### Vanilla : 논문에서 가장기본적으로 기술한 내용의 모델이다. 워드 임베딩 -> 뉴럴네트워크 -> attention의 흐름이다.  
+5epochs 수행후 Test accuracy는 74.6%를 기록하였다.  
+(snli_dec_vanilla_model.py, snli_dec_vanilla_trainer.py)  
+##### Bi-RNN : 위 버전에서 조금 나은 성능향상을 위해 개인적으로 시도해보았다. 워드 임베딩 -> Bi-RNN(GRU) -> attention의 흐름이다.  
+5epochs 수행후 Test accuracy는 76.3%를 기록하였다.  
+(snli_dec_rnn_model.py, snli_dec_rnn_trainer.py)  
 
 #### 2.2 Examples  
 <img src="./img/att1.png" width="75%">  
