@@ -37,9 +37,23 @@
 ##### Vanilla : 논문에서 기본적으로 기술한 내용의 모델이다. 워드 임베딩 -> FC layer -> attention의 흐름이다.  
 5epochs 수행후 Test accuracy는 74.6%를 기록하였다.  
 (snli_dec_vanilla_model.py, snli_dec_vanilla_trainer.py)  
+  
 ##### Bi-RNN : 위 버전에서 조금 나은 성능향상을 위해 개인적으로 시도해보았다. 워드 임베딩 -> Bi-RNN(GRU) -> attention의 흐름이다.  
 5epochs 수행후 Test accuracy는 76.3%를 기록하였다.  
 (snli_dec_rnn_model.py, snli_dec_rnn_trainer.py)  
+
+| epoch | Vanilla test acc  | Bi-RNN test acc  |
+| :-----: | :-: | :-: |
+| 1 | 0.6806 | 0.6905 |
+| 2 | 0.7114 | 0.7132 |
+| 3 | 0.7305 | 0.7308 |
+| 4 | 0.7442 | 0.7428 |
+| 5 | 0.7485 | 0.7549 |
+| 6 | 0.7449 | 0.7647 |
+| 7 | 0.7566 | 0.7697 |
+| 8 | 0.7556 | 0.7726 |
+| 9 | 0.7631 | 0.7785 |
+| 10 | 0.7685 | 0.7808 |
 
 #### 2.2 Examples  
 <img src="./img/att1.png" width="75%">  
